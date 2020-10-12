@@ -1,10 +1,22 @@
 import React, {Component} from 'react';
+import {PutiConsumer} from "./myContext";
 
 class Puti extends Component {
     render() {
         return (
             <div>
-                <h1>I am From Puti</h1>
+                <h1>
+
+                    <PutiConsumer>
+                        {
+                            msg=>{
+                                return msg;
+                            }
+
+                        }
+                    </PutiConsumer>
+
+                </h1>
             </div>
         );
     }
